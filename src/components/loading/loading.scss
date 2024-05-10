@@ -1,0 +1,31 @@
+.product__loading__title {
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.product__loading__subtitle {
+  width: 40%;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.bg__animation {
+  background: linear-gradient(90deg, #aaa, #eee, #aaa);
+
+  background-size: 200%;
+  animation: bgMove 1s linear 0s infinite;
+}
+
+@keyframes bgMove {
+  to {
+    background-position: 200%;
+  }
+}
+
+.loading__flex {
+  display: flex;
+  gap: 30px;
+}

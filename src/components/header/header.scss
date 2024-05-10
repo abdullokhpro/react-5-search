@@ -1,0 +1,140 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 15px 0px;
+  background-color: #fff;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 48px;
+  }
+
+  &__link {
+    transition: 0.2s;
+    &:hover {
+      color: #ff0000;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__menu {
+    display: none;
+    font-size: 26px;
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: #edf2f4;
+    border-radius: 10px;
+    padding: 0 10px;
+    height: 35px;
+
+    input {
+      flex: 1;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      height: 100%;
+    }
+  }
+}
+
+.search__detail {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  background-color: #fff;
+  box-shadow: 3px 5px 10px #0002;
+  border-radius: 0px 0px 10px 10px;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .header {
+    &__menu {
+      display: block;
+    }
+    &__list {
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: -50%;
+      width: 50%;
+      height: 100vh;
+      background: #000;
+      z-index: 999;
+    }
+
+    &__link {
+      color: #fff;
+    }
+
+    &__form {
+      input {
+        width: 100%;
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 515px) {
+  .header {
+    &__logo {
+      width: 100%;
+      max-width: 120px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.header__show {
+  left: 0;
+}
+.header__menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.449);
+}
